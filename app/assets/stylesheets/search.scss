@@ -7,7 +7,22 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  .infowindow_carousel {
+  #infowindow_carousel {
+    .carousel-inner{
+      .item{
+        img {
+              display: inline-block;
+        }
+      }
+    }
+  }
+}
+.infowindow {
+  font-family: Montserrat;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  #infowindow_carousell {
     .carousel-inner{
       .item{
         img {

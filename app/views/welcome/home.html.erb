@@ -645,8 +645,7 @@
 
 <%= javascript_tag do%>
   var handler = Gmaps.build('Google');
-  map = handler.buildMap({ internal: {id: 'geolocation'} }, function(){
-    // be aware chrome >= 50 requires https for geolocation to work
+  handler.buildMap({ provider: { scrollwheel: false, zoomControl: false }, internal: {id: 'geolocation'} }, function(){
     if(navigator.geolocation)
       navigator.geolocation.getCurrentPosition(displayOnMap);
   });

@@ -1,5 +1,5 @@
 
-<div class="container"> 
+
   <div class="form-group">
       <%= form.label :event_pic, "Upload Photos"%>
       <%= form.file_field :event_pic, multiple: true, class: "form-control", id: "event_pic" %>
@@ -74,5 +74,5 @@
     <%= form.label :age_range, "Suggested age range:" %>
     <%= form.select :age_range, options_for_select([ "  1 - 3", "  4 - 6  ", " 7 - 11", "11 - 14", "15 +" ], "choose"), class: "form-control", id: "age_range" %>
   </div>
-</div>
+
 
