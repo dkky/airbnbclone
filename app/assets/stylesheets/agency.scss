@@ -526,7 +526,7 @@ section h3.section-subheading {
   height: 80px;
   position: absolute;
   z-index: 100;
-  background-color: #fed136;
+  background-color: orange;
   color: white;
   border-radius: 100%;
   border: 7px solid #f1f1f1;
@@ -556,6 +556,10 @@ section h3.section-subheading {
 }
 .timeline > li:last-child {
   margin-bottom: 0;
+}
+.timeline .timeline-heading h3 {
+  margin-top: 0;
+  color: orange;
 }
 .timeline .timeline-heading h4 {
   margin-top: 0;
