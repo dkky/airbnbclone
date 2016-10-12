@@ -10,9 +10,6 @@
 
 	<div class="col-md-8" id='user-messages-section'>
 		
-		<div id="chat">
-			<%= render @messages, locals: {conversation: @conversation} %>
-		</div>
 		
 		<div class="panel panel-default" id="margin-adjust-1">
 			<div class="panel-heading">
@@ -36,6 +33,9 @@
 			</div>
 		</div>
 
+		<div id="chat">
+			<%= render @messages, locals: {conversation: @conversation} %>
+		</div>
 
 	</div>
 </div>

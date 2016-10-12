@@ -14,9 +14,12 @@
     outline:none;
     background: rgba(47,79,79,0.1);
   }
-.user_request_avatar {
+img.user_request_avatar {
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
 }
+
 .decline_div {
   margin-left: -30px;
 }
@@ -35,6 +38,23 @@
 .your_request {
   font-family: Montserrat;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.request-padding {
+  padding-top:150px;
+}
+
+.margin-adjust-span {
+    margin-right: 10px;
+    margin-left: -40px
+}
+ 
+h4.card-title {
+  margin-left:10px;
+}
+
+p.card-text {
+  margin-left:10px;
 }
 
 // .your_request_image {

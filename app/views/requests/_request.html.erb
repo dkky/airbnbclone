@@ -4,7 +4,7 @@
   <%= image_tag(request.user.avatar.url(:thumb), class: "user_request_avatar") %>
   </div>
   <div class="col-md-5">
-      <span><%= link_to "#{request.user.first_name} #{request.user.last_name}", request.user %></span><span class="text-muted"> "<%= request.comment %>" </span>
+      <span class="margin-adjust-span"><%= link_to "#{request.user.first_name} #{request.user.last_name}", request.user %></span><span class="text-muted"> "<%= request.comment %>" </span>
   </div>
   <div class="col-md-2">
       <%= form_for :button, method: :get, url: confirm_request_path(request), remote: true, :html => {:class => "confirm"} do |f| %>

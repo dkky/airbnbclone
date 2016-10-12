@@ -35,15 +35,16 @@ class EventPicUploader < CarrierWave::Uploader::Base
   end
 
   version :medium do
-
     process resize_to_limit: [200, 200]
   end
 
+  version :request do
+    process resize_to_fill: [360, 360]
+  end
 
 
   version :large do
     process resize_to_fill: [777, 500]
-
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
