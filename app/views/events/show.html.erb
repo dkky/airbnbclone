@@ -15,15 +15,14 @@
             </div>
             <!--./row-->
             <div class="row">
-                        <p>
-                            <i class="fa fa-tag" aria-hidden="true"></i>
-                            <span class="label label-default">Category1</span>
-                            <span class="label label-primary">Category2</span>
-                            <span class="label label-success">Category3</span>
-                            <span class="label label-info">Info</span>
-                            <span class="label label-warning">Warning</span>
-                            <span class="label label-danger">Danger</span>
-                        </p>
+                <% if @event.categories.present? %>
+                    <p>
+                        <i class="fa fa-tag" aria-hidden="true"></i>
+                        <% @event.categories.each do |category| %>
+                        <span class="label label-success"><%= category.category_name %></span>
+                        <% end %>
+                    </p>
+                <% end %>
             </div>
         </section>
         <section>

@@ -131,6 +131,11 @@ img#user-smaller-avatar {
   padding-top: 50px;
 }
 
+.padding-section-1 {
+  padding-top: 150px;
+}
+
+
 .padding-main-carousel {
   padding-top: 100px;
 }
@@ -138,4 +143,8 @@ img#user-smaller-avatar {
 .headline-font {
   font-size: 24px;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.textarea#message_content.form-control {
+  width:70%;
 }
