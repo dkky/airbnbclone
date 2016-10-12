@@ -20,7 +20,7 @@
 					
 					<%= form_for [@conversation, @conversation.messages.new], remote: true do |f| %>
 						<div class="form-group" id="margin-adjust-1">
-							<%= f.text_area :content, style: "width: 800px; height: 34px;", placeholder: "Add a personal message", class: "form-control"  %>
+							<%= f.text_area :content, style: "width: 700px; height: 34px;", placeholder: "Add a personal message", class: "form-control"  %>
 						</div>
 						<%= f.hidden_field :user_id, value: current_user.id %>
 
