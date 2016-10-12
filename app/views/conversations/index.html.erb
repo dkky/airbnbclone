@@ -5,6 +5,8 @@
 			<div class="panel-heading">Your conversations</div>
 			<div class="panel-body">
 				<div class="container">
+				<% byebug %>
+					<% if @conversations.present? %>
 					<% @conversations.each do |conversation| %>
 						<% other = conversation.sender == current_user ? conversation.recipient : conversation.sender %>
 
@@ -25,6 +27,7 @@
 							</div>
 
 						<% end %>
+					<% end %>
 					<% end %>
 				</div>
 			</div>
