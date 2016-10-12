@@ -1,4 +1,4 @@
-
+<% if current_user %>
     <div class="portfolio-modal modal fade" id="modal_<%= event.id %>" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 99999;">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -185,3 +185,4 @@
             </div>
         </div>
     </div>
+<% end %>
