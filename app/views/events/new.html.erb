@@ -1,11 +1,17 @@
 
 <div id='event-form' class="increase-padding-top">
-	<%= form_for @event do |form| %>
-	    <%= render partial: '/events/form', object: form %>
-	    <br>
-	    <div class="submit-field">
-	      <%= form.submit "Create your event", class: "btn btn-default"%>
-	    </div>
-    <% end %>
+  <div class="container">
+    <h3>Create Your Event</h3>
+  	<%= form_for @event do |form| %>
+  	    <%= render partial: '/events/form', object: form %>
+  	    <br>
+  	    <div class="submit-field">
+  	      <%= form.submit "Create your event", class: "btn btn-default"%>
+  	    </div>
+      <% end %>
+  </div>
 </div>
 
+<script type="text/javascript">
+  $("#geocomplete").geocomplete();
+</script>
