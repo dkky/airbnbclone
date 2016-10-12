@@ -1,0 +1,20 @@
+<div class="form-container radius-box glassy-bg small-10 small-centered medium-8 large-6 columns">
+
+<div class="container">
+
+  <h2 class="mbs">Booking Request Payment</h2>
+
+  <%= form_tag transactions_path do%>
+    <p>Please enter your payment details:</p>
+    <div id="dropin"></div>
+    <%= hidden_field_tag(:comment, @comment)%>
+    <%= hidden_field_tag(:event_id, @event_id)%>
+    <%= hidden_field_tag(:charge, @charge)%>
+    <%=submit_tag "Pay RM#{@charge}", class: "button mt1" %>
+  <%end%>
+
+</div>
+</div>
+
+
+

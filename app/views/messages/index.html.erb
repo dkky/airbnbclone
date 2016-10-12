@@ -1,0 +1,45 @@
+<div class="row increase-padding-top-2" id="increase-padding-top">
+	
+	<div class="col-md-3 text-center">
+		<% if @other.avatar.present? %>
+       		 <%= image_tag @other.avatar.url(:medium), id: "user-chat-avatar" %>
+    	<% end %><br>
+		<strong><%= @other.first_name %></strong><br>
+		<%= link_to "View Profile", @other, class: "btn btn-default wide" %>
+	</div>
+
+	<div class="col-md-8" id='user-messages-section'>
+		
+		<div id="chat">
+			<%= render @messages, locals: {conversation: @conversation} %>
+		</div>
+		
+		<div class="panel panel-default" id="margin-adjust-1">
+			<div class="panel-heading">
+				Your conversation with <strong><%= @other.first_name %></strong>
+			</div>
+			<div class="panel-body">
+				<div class="container">
+					
+					<%= form_for [@conversation, @conversation.messages.new], remote: true do |f| %>
+						<div class="form-group" id="margin-adjust-1">
+							<%= f.text_area :content, style: "width: 800px; height: 34px;", placeholder: "Add a personal message", class: "form-control"  %>
+						</div>
+						<%= f.hidden_field :user_id, value: current_user.id %>
+
+						<div class="actions">
+							<%= f.submit "Send Message", class: "btn btn-primary" %>
+						</div>
+					<% end %>
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+<%= subscribe_to conversation_messages_path(@conversation) %>
+
+

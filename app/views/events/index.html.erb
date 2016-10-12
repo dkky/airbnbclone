@@ -1,0 +1,18 @@
+<% @events.each do |event|%>
+<br>
+<%= link_to "#{event.title}", event_path(event.id) %><br>
+   <!--  < %if event.avatars.present? %>
+        < %= image_tag (event.avatars[0].square.url) %><br>
+    < %end%> -->
+        <%= event.title %>
+        <br>
+        <%= event.location %>
+        <br>
+        <%= event.description %>
+        <br>
+        <%= event.open_spots %>
+        <br>
+        <%= event.price %>
+
+<!--< %= link_to 'Book', new_event_reservation_path(event.id)%>-->
+<%end%>

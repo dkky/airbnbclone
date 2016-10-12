@@ -1,0 +1,11 @@
+
+<div id='event-form' class="increase-padding-top">
+	<%= form_for @event do |form| %>
+	    <%= render partial: '/events/form', object: form %>
+	    <br>
+	    <div class="submit-field">
+	      <%= form.submit "Create your event", class: "btn btn-default"%>
+	    </div>
+    <% end %>
+</div>
+

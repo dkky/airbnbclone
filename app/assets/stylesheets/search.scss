@@ -1,0 +1,56 @@
+// Place all the styles related to the search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.infowindow {
+  font-family: Montserrat;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  .infowindow_carousel {
+    .carousel-inner{
+      .item{
+        img {
+              display: inline-block;
+        }
+      }
+    }
+  }
+}
+.result_page,
+.result_page_map {
+  margin-top: -30px;
+}
+.result_page {
+  max-height: 480px;
+  overflow-y: auto;
+  font-family: Montserrat;
+/*  border-style: solid;
+  border-radius: 5px;
+*/}
+#search_input {
+  margin-left: 20px;
+  font-family: Montserrat;
+  width: 480px;
+  height: 50px;
+  background: #ffffff;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#search_input:hover, #search_input:focus, #search_input:active{
+    outline:none;
+    background: rgba(47,79,79,0.1);
+  }
+.search_bar_icon{
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 37px;
+  z-index: 1;
+  color: #4f5b66;
+}

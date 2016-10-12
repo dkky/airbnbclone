@@ -1,0 +1,20 @@
+<div id="row_<%= request.id %>" class="request_box">
+  <hr>
+  <div class="col-md-1">
+  <%= image_tag(request.user.avatar.url(:thumb), class: "user_request_avatar") %>
+  </div>
+  <div class="col-md-5">
+      <span><%= link_to "#{request.user.first_name} #{request.user.last_name}", request.user %></span><span class="text-muted"> "<%= request.comment %>" </span>
+  </div>
+  <div class="col-md-2">
+      <%= form_for :button, method: :get, url: confirm_request_path(request), remote: true, :html => {:class => "confirm"} do |f| %>
+      <%= f.submit "Confirm", class: "btn btn-success btn-#{request.id} btn-request" %>
+      <% end %>
+  </div>
+  <div class="col-md-2 decline_div">
+      <%= form_for :button, method: :get, url: decline_request_path(request), remote: true, :html => {:class => "decline"} do |f| %>
+      <%= f.submit "Decline", class: "btn btn-danger btn-#{request.id} btn-request" %>
+      <% end %>
+  </div>
+  <canvas class="col-md-2" height="80" id="canvas_<%= request.id %>"></canvas>
+</div>

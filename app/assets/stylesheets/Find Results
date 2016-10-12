@@ -1,0 +1,33 @@
+Searching 4102 files for "event-form"
+
+/Users/desmondkang/Desktop/kampy/app/assets/stylesheets/events.scss:
+  175  }
+  176  
+  177: #event-form {
+  178    margin:20px;
+  179  }
+
+/Users/desmondkang/Desktop/kampy/app/views/events/new.html.erb:
+    1: <div id='event-form' class="increase-padding-top">
+    2  	<%= form_for @event do |form| %>
+    3  	    <%= render partial: '/events/form', object: form %>
+
+2 matches across 2 files
+
+
+Searching 4102 files for "event-form"
+
+/Users/desmondkang/Desktop/kampy/app/assets/stylesheets/events.scss:
+  175  }
+  176  
+  177: #event-form {
+  178    margin:20px;
+  		 padding-top:150px;
+  179  }
+
+/Users/desmondkang/Desktop/kampy/app/views/events/new.html.erb:
+    1: <div id='event-form' class="increase-padding-top">
+    2  	<%= form_for @event do |form| %>
+    3  	    <%= render partial: '/events/form', object: form %>
+
+2 matches across 2 files

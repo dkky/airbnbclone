@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Review</h1>
+
+  <%= form_for @review do |form| %>
+  <div class="text-field">
+    <%= form.label :"Event Title" %>
+    <%= form.text_field :event_title, type: 'text', :required => true, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= form.label :"Rating" %>
+    <%= form.select :score, [0, 1,2,3,4,5], :required => true, class: "dropdown-menu" %>
+  </div>
+
+  <div class="text-field">
+    <%= form.label :"Comments" %>
+    <%= form.text_area :comment, type: 'text', :required => true, class: 'form-control' %>
+  </div>
+
+  <%= form.submit "Submit Review", class: "btn btn-primary" %>
+
+  <% end %>
+
+
+</div>

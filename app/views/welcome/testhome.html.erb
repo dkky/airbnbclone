@@ -1,0 +1,18 @@
+<h1>User's Avatar and Photos</h1>
+
+<p>Avatar:</p>
+<% @users.each do |user|%>
+  <% if user.avatar.present? %>
+    <%= image_tag user.avatar.url(:thumb) %>
+  <% end %>
+<% end %><br><br><br>
+
+<p>Photos:</p>
+
+<% @users.each do |user|%>
+  <% if user.photos.present? %>
+    <% user.photos.each do |photo| %>
+    <%= image_tag photo.url(:medium) %>
+  <% end %>
+  <% end %>
+<% end %>

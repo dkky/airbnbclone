@@ -1,0 +1,43 @@
+// Place all the styles related to the requests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.requests {
+  font-family: Montserrat;
+}
+.request_box {
+  height: 70px;
+  font-family: Montserrat;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+}
+.request_box:hover, .request_box:focus, .request_box:active{
+    outline:none;
+    background: rgba(47,79,79,0.1);
+  }
+.user_request_avatar {
+  border-radius: 50%;
+}
+.decline_div {
+  margin-left: -30px;
+}
+.btn-request {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+}
+.cardy {
+  background: #3E4551;
+  color: white;
+  text-align: center;
+  p {
+    height: 5px;
+  }
+}
+
+.your_request {
+  font-family: Montserrat;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+// .your_request_image {
+//   vertical-align: middle;
+//   width: 360px;
+// }

@@ -1,0 +1,58 @@
+
+<div class="row">
+  <div class="col-md-6 result_page">
+
+    <% @events.each do |event| %>
+      <div class="row container">
+      <div class="col-md-6" id="event_<%= event.id %>">
+
+      <h4>
+        <%= link_to event.title, controller: "events", action: "show", id: event._id%>
+      </h4>
+      <p>Event Type: <strong><%= event.event_type %></strong></p>
+      <p>Event Location: <strong><%= event.location %></strong></p>
+      <p>Event Description: <strong><%= event.description %></strong></p>
+      <p>Price: <strong><%= event.price %></strong></p>
+      <hr>
+
+      </div>
+      </div>
+    <% end %>
+
+  </div>
+
+<div class="col-md-6 result_page_map">
+
+  <div id="multi_markers" style='width: 600px; height: 500px;'></div>
+
+</div>
+
+
+</div>
+
+<%= javascript_tag do%>
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
+
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+
+  _.each(<%=raw @hash.to_json %>, function(json, index){
+    json.marker = markers[index];
+    $("#event_" + json.id).on('mouseover', function() {
+      handler.getMap().setZoom(12);
+      json.marker.setMap(handler.getMap());
+      json.marker.panTo();
+      google.maps.event.trigger(json.marker.getServiceObject(), 'click');
+    });
+    });
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+
+
+});
+
+    
+
+
+
+<% end %>

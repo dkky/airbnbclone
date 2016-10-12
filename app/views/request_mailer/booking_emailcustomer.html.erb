@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+
+  <h1>Hi <%= "#{@customer.first_name} #{@customer.last_name}" %></h1>
+  <p> Thank you for placing your reservation for the event hosted by <%= "#{@host.first_name} #{@host.last_name}" %>: <strong><%= "#{@event.title}, #{@event.start_date}, #{@event.start_time} - #{@event.end_date}, #{@event.end_time}" %></strong> </p>
+  <p>Booking Request ID: <%= @request_id %></p>
+  <p>You can communicate with <%= "#{@host.first_name} #{@host.last_name} at #{@host.email}" %></p>
+
+ </body>
+</html>

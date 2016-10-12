@@ -1,0 +1,33 @@
+$(".btn-<%= @id %>").attr("disabled","true");
+var center = 40
+var start = center - 30;
+var width = 9;
+var leftX = start;
+var leftY = start;
+var rightX = start;
+var rightY = center + 30;
+var animationSpeed = 20;
+var ctx = $('#canvas_<%= @id %>')[0].getContext('2d');
+ctx.lineWidth = width;
+ctx.strokeStyle = 'rgba(128,0,0,0.7)';
+for (i = center - 30; i < center + 30; i++) {
+    var drawLeft = window.setTimeout(function () {
+        ctx.beginPath();
+        ctx.moveTo(start, start);
+        ctx.lineTo(leftX, leftY);
+        ctx.lineCap = 'round';
+        ctx.stroke();
+        leftX++;
+        leftY++;
+    }, 1 + (i * animationSpeed) / 3);
+}
+for (i = center - 30; i < center + 30; i++) {
+    var drawRight = window.setTimeout(function () {
+        ctx.beginPath();
+        ctx.moveTo(start, center + 30);
+        ctx.lineTo(rightX, rightY);
+        ctx.stroke();
+        rightX++;
+        rightY--;
+    }, 1 + (i * animationSpeed) / 3);
+}

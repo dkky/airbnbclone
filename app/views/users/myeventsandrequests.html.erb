@@ -1,0 +1,51 @@
+<div class="container">
+  <% @events.each do |event| %>
+    <div class="requests">
+      <h3><%= event.title %></h3>
+          <%= render event.requests.where("status = ?", "Pending") %>
+    </div>
+  <% end %>
+</div>
+<hr>
+
+<div class="container requests">
+  <h3>Your Event Booking Requests</h3>
+  <% @requests.each_slice(3) do |requests| %>
+    <div class="row">
+      <% requests.each do |request| %>
+
+        <div class="col-md-4">
+          <div class="your_request">
+              <!--Card image-->
+              <div class="view overlay hm-white-slight">
+                  <img src="http://mdbootstrap.com/images/reg/reg%20(2).jpg" class="featured-image" alt="">
+              </div>
+              <!--/.Card image-->
+              <!--Card content-->
+              <div class="card-block">
+                  <!--Title-->
+                  <h4 class="card-title"><strong>Event:     </strong><%= "#{request.event.title}" %></h4>
+                  <!--Text-->
+                  <p class="card-text"><strong>Status:   </strong><%= "#{request.status}" %>
+                  <% if request.status == "Confirmed" %>
+                    <i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i>
+                  <% elsif request.status == "Declined" %>
+                    <i class="fa fa-thumbs-o-down fa-lg" aria-hidden="true"></i>
+                  <% else %>
+                    <i class="fa fa-hand-paper-o fa-lg" aria-hidden="true"></i>
+                  <% end %>
+                  </p>
+                  <div class="cardy">
+                  <p></p>
+                  <i class="fa fa-calendar fa-lg" aria-hidden="true"></i><span><%= "        #{(request.event.start_date).strftime('%a %d %b %Y')} -- #{(request.event.end_date).strftime('%a %d %b %Y')}" %></span>
+                  <p></p>
+                  </div>
+              </div>
+              <!--/.Card content-->
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <hr>
+  <% end %>
+</div>

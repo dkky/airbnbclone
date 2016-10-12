@@ -1,0 +1,187 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#event-body {
+    background-color: #f8f8f8;
+/*    background: url("http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/07/white-background-10.jpg") no-repeat center top;
+*/    background-size: 100% 60%;
+    background-repeat: no-repeat;
+}
+
+.modal-body {
+    padding:0px;
+}
+
+.modal-content {
+    background-color: #f8f8f8;
+/*    background: url("http://www.wallpaperun.com/wp-content/uploads/2016/02/White-Wallpaper-High-Quality-C2Y.jpg") no-repeat center top;
+*/    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    padding:0px;
+}
+
+section {
+    padding:10px;
+}
+
+
+#event-about-section {
+    padding:0px;
+}
+
+.event-info .icon {
+    float: left;
+    width: 8rem;
+    color: #bbbac0;
+    font-size: 3.4rem;
+    line-height: 7.4rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid #bbbac0;
+}
+
+.event-info {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.event-info .info {
+    padding: 1.3rem 0 0 9rem;
+}
+
+.event-info h3 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.countdown {
+    padding: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+#event-carousel-image img {
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+}
+
+.carousel-control {
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+}
+
+#clear-background-image {
+    background-image: none
+}
+
+#event-details-section {
+   padding:20px;
+}
+
+.carousel .item {
+    width: 100%;
+}
+
+#event-carousel {
+    width: inherit;
+}
+
+#joiner-message-box {
+    width:50%;
+    margin-left: 30px;
+}
+
+.event-info:hover {    
+    .fa-rotate-350 {
+    -webkit-transform: rotate(250deg);
+    -moz-transform: rotate(250deg);
+    -ms-transform: rotate(250deg);
+    -o-transform: rotate(250deg);
+    transform: rotate(250deg);
+    }
+}
+
+
+.fa:before {content: "\f103";}
+
+.bounce {
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    border-radius:50%;
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
+}
+ 
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+    40% {-webkit-transform: translateY(-30px);}
+    60% {-webkit-transform: translateY(-15px);}
+}
+ 
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+    40% {-moz-transform: translateY(-30px);}
+    60% {-moz-transform: translateY(-15px);}
+}
+ 
+@-o-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+    40% {-o-transform: translateY(-30px);}
+    60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+
+
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+
+.styled-select.slate {
+   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+   height: 34px;
+   width: 240px;
+}
+
+.styled-select.slate select {
+   border: 1px solid #ccc;
+   font-size: 14px;
+   height: 34px;
+   width: 268px;
+}
+
+#zero-margin-padding {
+    margin:0px;
+    padding:0px;
+}
+
+#event-form {
+  margin:30px;
+  padding-top:150px;
+}
+

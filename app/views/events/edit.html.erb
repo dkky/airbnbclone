@@ -1,0 +1,11 @@
+
+<%= form_for @event do |form| %>
+    <%= render partial: '/events/form', object: form %>
+
+    <br>
+
+    <div class="submit-field">
+      <%= form.submit "Update Now", class: "btn btn-default"%>
+    </div>
+
+  <% end %>
