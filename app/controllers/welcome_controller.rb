@@ -2,8 +2,8 @@ class WelcomeController < ApplicationController
 
   def home
     @reviews = Review.all
-    @events = Event.where(event_type: "Event").order("created_at DESC").limit(12)
-    @suggestions = Event.where(event_type: "Suggestion").limit(12)
+    @events = Event.where(event_type: "Event").order("created_at DESC").limit(4)
+    @suggestions = Event.where(event_type: "Suggestion").limit(4)
     @users = User.all
     all_events = Event.all
     gon.hashhh = []

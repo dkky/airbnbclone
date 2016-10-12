@@ -91,7 +91,11 @@
                                                 <div class="icon fa fa-money fa-rotate-350"></div>
                                                 <div class="info">
                                                     <h3>Price</h3>
-                                                    <span><%= event.price %></span>
+                                                    <% if event.isfree %>
+                                                        <span>Free</span>
+                                                    <% else %>
+                                                        <span>RM<%= event.price.to_i %></span>
+                                                    <% end %>
                                                 </div>
                                             </div>
                                         </div>
@@ -136,7 +140,8 @@
                                                          <strong> About Host </strong>
                                                     </div>
                                                     <ul class="fa-ul">
-                                                        <li><i class="fa fa-user" aria-hidden="true"></i> Host's Name and Spouse's Name</li><br>
+                                                        <li><i class="fa fa-user" aria-hidden="true"></i> Host's Name and Spouse's Name</li>
+                                                        <li><%= event.user.first_name %> and <%= event.user.spouse_first_name %></li><br>
                                                         <li><i class="fa fa-users" aria-hidden="true"></i> 3 kids </li><br>
                                                     </ul>
                                                     <blockquote>
