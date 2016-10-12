@@ -43,7 +43,7 @@ before_action :set_event, only: [:show, :update, :edit, :destroy]
     gon.hashh = {lat: @event.latitude, lng: @event.longitude, infowindow: "You are here"}
   end
 
-
+  
 
 
 private
