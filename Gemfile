@@ -37,6 +37,7 @@ gem 'geocoder'
 # real time chat
 gem 'private_pub'
 gem 'thin'
+gem 'foreman'
 
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 # for image uploading
