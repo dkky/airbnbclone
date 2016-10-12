@@ -72,7 +72,7 @@ gem 'zopim_rails', '0.0.8'
 
 gem 'braintree', '~> 2.66'
 
-gem 'owlcarousel-rails'
+# gem 'owlcarousel-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

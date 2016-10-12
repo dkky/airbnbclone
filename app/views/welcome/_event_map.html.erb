@@ -1,27 +1,26 @@
-
 <div class="infowindow">
 <strong><%= event.title %></strong><br>
 <strong><%= "#{(event.start_date).strftime('%a %d %b %Y')} -- #{(event.end_date).strftime('%a %d %b %Y')}" %></strong><br>
-  <div class="infowindow_carousel" class="carousel slide" data-ride="carousel">
+  <div id="infowindow_carousell" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <%= image_tag(event.event_pic[0].url(:thumb), size: "250") %>
+        <%= image_tag(event.event_pic[0].url, size: "250") %>
       </div>
       <% if event.event_pic.count > 1 %>
         <% i = 1 %>
           <% while i < event.event_pic.count %>
             <div class="item">
-              <%= image_tag(event.event_pic[i].url(:thumb), size: "250") %>
+              <%= image_tag(event.event_pic[i].url, size: "250") %>
             </div>
           <% i += 1 %>
           <% end %>
       <% end %>
     </div>
-    <a class="left carousel-control" href="#infowindow_carousel" role="button" data-slide="prev">
+    <a class="left carousel-control" id="clear-background-image" href="#infowindow_carousell" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#infowindow_carousel" role="button" data-slide="next">
+    <a class="right carousel-control" id="clear-background-image" href="#infowindow_carousell" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
