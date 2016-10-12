@@ -6,7 +6,7 @@ class RequestsController < ApplicationController
 	end
 
 	def create
-		# if Request.where(user_id: current_user.id, event_id: params[:event_id]).empty?
+		if Request.where(user_id: current_user.id, event_id: params[:event_id]).empty?
 			@request = current_user.requests.new(comment: params[:booking_request][:comment], no_of_kids: params[:booking_request][:no_of_kids], status: "Pending", event_id: params[:event_id])
 			@event = Event.find(params[:event_id])
 			@host = User.find(@event.user_id)
@@ -33,12 +33,12 @@ class RequestsController < ApplicationController
 		  	byebug
 	      redirect_to new_transaction_path(new_hash)
 	    end
-	  # else
-	  # 	respond_to do |format|
-	  # 		@data = "You have already requested to join the event"
-	  # 		format.js
-	  # 	end
-	  # end
+	  else
+	  	respond_to do |format|
+	  		@data = "You have already requested to join the event"
+	  		format.js
+	  	end
+	  end
 
 	end
 
