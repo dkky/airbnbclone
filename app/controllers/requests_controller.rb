@@ -30,7 +30,6 @@ class RequestsController < ApplicationController
 			else
 
 		  	new_hash = params[:booking_request].merge!(event_id: @event.id, charge: @charge)
-		  	byebug
 	      redirect_to new_transaction_path(new_hash)
 	    end
 	  else
