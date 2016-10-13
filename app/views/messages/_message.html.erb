@@ -1,8 +1,12 @@
 <div class="panel">
 	<div class="panel-body">
-	<% if @other.avatar.present? %>
+	<% if message.user == current_user %>
+		<%= image_tag current_user.avatar.url(:thumb), id: "user-small-avatar" %>
+	<% else %>
+		<% if @other.avatar.present? %>
        		 <%= image_tag @other.avatar.url(:thumb), id: "user-small-avatar" %>
     <% end %>
+  <% end %>
 		<strong><%= message.user.first_name %></strong>
 
 		<span class="pull-right"><i class="fa fa-comment-o" id="margin-minor-adjust-2" aria-hidden="true"></i><%= message.message_time %></span>

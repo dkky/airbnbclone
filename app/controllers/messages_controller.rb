@@ -14,9 +14,7 @@ class MessagesController < ApplicationController
 	def create
 		@message = @conversation.messages.new(message_params)
 		@messages = @conversation.messages.order("created_at DESC")
-		if current_user == @conversation.sender || current_user == @conversation.recipient
-			@other = current_user == @conversation.sender ? @conversation.recipient : @conversation.sender
-		end
+			@other = current_user 
 
 
 		if @message.save

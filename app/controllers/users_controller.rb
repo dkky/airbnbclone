@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def myeventsandrequests
     @user = current_user
-    @events = Event.where("user_id = ? AND start_date > ?", @user.id, Date.today)
+    @events = Event.where("user_id = ? AND start_date > ? AND event_type = ?", @user.id, Date.today, "Event")
     @requests = Request.where("user_id = ?", @user.id)
   end
 

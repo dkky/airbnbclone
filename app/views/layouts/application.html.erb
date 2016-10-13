@@ -76,6 +76,7 @@
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Hi, <%= current_user.first_name if current_user.first_name.present? %><b class="caret"></b></a>
                         <ul class="dropdown-menu">
                           <li><%= link_to "My Events & Requests", myeventsandrequests_path, :class => "page-scroll"%></li>
+                          <li><%= link_to "My Profile", current_user, :class => "page-scroll"%></li>
                           <li><a href="/users/edit">Edit Profile</a></li>
                           <li><a href="#">Setting</a></li>
                           <li>
