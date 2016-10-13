@@ -6,12 +6,13 @@ class ReviewsController < ApplicationController
   end
 
   def create
-
+    @event = Event.find_by(title: review_params[:event_title])
     @review = Review.new(review_params)
 
     if @review.save
       @user = User.find(params[:user_id].to_i)
-      @review.update(user_id: params[:user_id].to_i)
+      @review.update(event_id: @event.id)
+      @review.update(user_id: current_user.id)
       redirect_to @user
     else
       render 'new'
