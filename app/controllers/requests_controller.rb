@@ -15,7 +15,7 @@ class RequestsController < ApplicationController
 				@charge = @event.price * params[:booking_request][:no_of_kids].to_i
 			end
 
-			if @event.isfree
+			# if @event.isfree
 				respond_to do |format|
 			      if @request.save
 			      	@data = "Your request to join the event has been sent"
@@ -27,11 +27,11 @@ class RequestsController < ApplicationController
 			        format.json { render json: "Please submit a valid request" }
 			      end
 			    end
-			else
+			# else
 
-		  	new_hash = params[:booking_request].merge!(event_id: @event.id, charge: @charge)
-	      redirect_to new_transaction_path(new_hash)
-	    end
+		 #  	new_hash = params[:booking_request].merge!(event_id: @event.id, charge: @charge)
+	  #     redirect_to new_transaction_path(new_hash)
+	  #   end
 	  else
 	  	respond_to do |format|
 	  		@data = "You have already requested to join the event"
