@@ -84,37 +84,7 @@
   </div>
 
 
-      <button class="btn btn-primary" id="review_user_button">Review Event</button>
 
-      <div class="container">
-
-        <%= form_for @review, :html => {:id => "review_form"} do |form| %>
-        <div class="text-field">
-          <%= form.label :"Event Title" %>
-          <%= form.text_field :event_title, type: 'text', :required => true, class: 'form-control' %>
-        </div>
-
-        <div id="user_stars"></div>
-
-        <div class="text-field">
-          <%= form.label :"Comments" %>
-          <%= form.text_area :comment, type: 'text', :required => true, class: 'form-control' %>
-        </div>
-
-        <%= hidden_field_tag(:user_id, @user.id)%>
-        <%= form.submit "Submit Review", class: "btn btn-primary" %>
-
-        <% end %>
-
-
-        <script>
-          $('#user_stars').raty({
-            path: '/assets',
-            scoreName: 'review[score]',
-            score: 1
-          });
-
-        </script>
 
 
       </div>
